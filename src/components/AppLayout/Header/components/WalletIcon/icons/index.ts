@@ -10,6 +10,7 @@ import authereumIcon from './icon-authereum.png'
 import torusIcon from './icon-torus.svg'
 import coinbaseIcon from './icon-coinbase.svg'
 import operaIcon from './icon-opera.png'
+import safeIcon from './icon-safe.png'
 
 import { WALLET_PROVIDER } from 'src/logic/wallets/getWeb3'
 
@@ -25,6 +26,14 @@ type WalletObjectsProps<Tvalue> = {
 }
 
 const WALLET_ICONS: WalletObjectsProps<IconValue> = {
+  [WALLET_PROVIDER.SAFE]: {
+    src: safeIcon,
+    height: 25,
+  },
+  [WALLET_PROVIDER.GNOSIS_SAFE]: {
+    src: safeIcon,
+    height: 25,
+  },
   [WALLET_PROVIDER.METAMASK]: {
     src: metamaskIcon,
     height: 25,

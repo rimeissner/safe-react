@@ -24,12 +24,14 @@ const WalletIcon = ({ provider }: WalletIconProps): React.ReactElement => {
   const classes = useStyles()
   return (
     <Col className={classes.container} layout="column" start="sm">
-      <Img
-        alt={provider}
-        className={classes.icon}
-        height={WALLET_ICONS[provider].height}
-        src={WALLET_ICONS[provider].src}
-      />
+      {WALLET_ICONS[provider] && (
+        <Img
+          alt={provider}
+          className={classes.icon}
+          height={WALLET_ICONS[provider].height}
+          src={WALLET_ICONS[provider].src}
+        />
+      )}
     </Col>
   )
 }

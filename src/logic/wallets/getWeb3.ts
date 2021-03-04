@@ -11,6 +11,7 @@ import { getAddressFromUnstoppableDomain } from './utils/unstoppableDomains'
 
 export const WALLET_PROVIDER = {
   SAFE: 'SAFE',
+  GNOSIS_SAFE: 'GNOSIS SAFE',
   METAMASK: 'METAMASK',
   REMOTE: 'REMOTE',
   TORUS: 'TORUS',

@@ -1,0 +1,7 @@
+{
+    "short_name": "Safe",
+    "name": "Gnosis Safe",
+    "description": "Gnosis Safe - The most trusted platform to manage digital assets on Ethereum",
+    "url": "https://gnosis-safe.io/",
+    "iconPath": "resources/safe.png"
+  }

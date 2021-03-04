@@ -165,8 +165,6 @@ export const isAppManifestValid = (appInfo: SafeApp): boolean =>
   appInfo.name !== 'unknown' &&
   // `description` exists
   !!appInfo.description &&
-  // `url` exists
-  !!appInfo.url &&
   // no `error` (or `error` undefined)
   !appInfo.error
 
@@ -199,9 +197,10 @@ export const getAppInfoFromUrl = memoize(
 
     try {
       const appInfo = await axios.get(`${noTrailingSlashUrl}/manifest.json`, { timeout: 5_000 })
+      delete appInfo.data['url']
 
       // verify imported app fulfil safe requirements
-      if (!appInfo?.data || isAppManifestValid(appInfo.data)) {
+      if (!appInfo?.data || !isAppManifestValid(appInfo.data)) {
         throw Error('The app does not fulfil the structure required.')
       }
 
